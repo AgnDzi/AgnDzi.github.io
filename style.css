@@ -10,8 +10,13 @@ h1 {
   list-style-type: none;
 }
 
+#logo {
+  cursor: pointer;
+}
+
 li {
   margin: 15px 5px;
+  cursor: pointer;
 }
 
 nav {
@@ -29,6 +34,7 @@ nav {
   padding: 10px;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 #art2 {
@@ -41,6 +47,7 @@ nav {
   padding: 10px;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
 #art3 {
@@ -53,12 +60,31 @@ nav {
   padding: 10px;
   font-weight: bold;
   position: relative;
+  cursor: pointer;
 }
 
-section {
+section,
+#sec1 {
   display: flex;
   justify-content: space-between;
   padding: 50px 30px 50px 30px;
+}
+
+#sec2,
+#sec3,
+#sec4 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  padding: 50px 30px 50px 30px;
+  text-align: justify;
+}
+
+.imag {
+  padding: 20px 30px 20px 30px;
 }
 
 .link {
