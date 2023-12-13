@@ -1,9 +1,3 @@
-body {
-}
-
-h1 {
-}
-
 #nav-bar {
   display: flex;
   justify-content: flex-end;
@@ -14,7 +8,7 @@ h1 {
   cursor: pointer;
 }
 
-li {
+.li-nav {
   margin: 15px 5px;
   cursor: pointer;
 }
@@ -24,55 +18,36 @@ nav {
   justify-content: space-between;
 }
 
-#art1 {
-  width: 25%;
-  height: 450px;
+.img-art {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.p-art {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  padding-right: 10px;
   color: white;
   font-size: 30px;
-  background-image: url(source/nr4.jpg);
   text-align: justify;
-  padding: 10px;
-  font-weight: bold;
+}
+
+.art {
+  width: 30%;
+  height: 350px;
   position: relative;
   cursor: pointer;
 }
 
-#art2 {
-  width: 25%;
-  height: 450px;
-  color: white;
-  font-size: 30px;
-  background-image: url(source/nr3.jpg);
-  text-align: justify;
-  padding: 10px;
-  font-weight: bold;
-  position: relative;
-  cursor: pointer;
-}
-
-#art3 {
-  width: 25%;
-  height: 450px;
-  color: white;
-  font-size: 30px;
-  background-image: url(source/nr1.jpg);
-  text-align: justify;
-  padding: 10px;
-  font-weight: bold;
-  position: relative;
-  cursor: pointer;
-}
-
-section,
-#sec1 {
+.sec-main {
   display: flex;
   justify-content: space-between;
   padding: 50px 30px 50px 30px;
 }
 
-#sec2,
-#sec3,
-#sec4 {
+.sec-art {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -85,15 +60,6 @@ section,
 
 .imag {
   padding: 20px 30px 20px 30px;
-}
-
-.link {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 
 footer {
