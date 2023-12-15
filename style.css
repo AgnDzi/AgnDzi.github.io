@@ -9,7 +9,7 @@
 }
 
 .li-nav {
-  margin: 15px 5px;
+  margin: 0.94rem 0.31rem;
   cursor: pointer;
 }
 
@@ -27,16 +27,16 @@ nav {
 .p-art {
   position: absolute;
   bottom: 0;
-  left: 10px;
-  padding-right: 10px;
+  left: 0.625rem;
+  padding-right: 0.625rem;
   color: white;
-  font-size: 30px;
+  font-size: 1.875rem;
   text-align: justify;
 }
 
 .art {
   width: 30%;
-  height: 450px;
+  height: 28.125rem;
   position: relative;
   cursor: pointer;
 }
@@ -44,7 +44,13 @@ nav {
 .sec-main {
   display: flex;
   justify-content: space-between;
-  padding: 50px 30px 50px 30px;
+  padding: 3.125rem 1.875rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .sec-main {
+    display: block;
+  }
 }
 
 .sec-art {
@@ -54,14 +60,14 @@ nav {
 }
 
 .text {
-  padding: 50px 30px 50px 30px;
+  padding: 3.125rem 1.875rem;
   text-align: justify;
 }
 
 .imag {
-  padding: 20px 30px 20px 30px;
+  padding: 1.25rem 1.875rem;
 }
 
 footer {
-  padding: 0 30px 350px 30px;
+  padding-left: 0.625rem;
 }
