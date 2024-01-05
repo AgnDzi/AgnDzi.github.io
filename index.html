@@ -1,122 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>artPlotek</title>
+    <title>kanapkowo</title>
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    ></link>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <nav>
-      <img src="source/logo.png" alt="logo" width="120" height="80" id="logo" />
+    <div class="main">
+      <div class="nav-bar">
+        <div class="nav-bar-ele1">HOME</div>
+        <div class="nav-bar-ele2">User (cook)</div>
+      </div>
+      <div class="container">
+        <div class="left-menu" id="leftMenu">
+          MENU
+          <ul class="ul-menu">
+            <li class="li-menu" id="li-ingred">Ingredients</li>
+            <li class="li-menu" id="li-recipes">Recipes</li>
+          </ul>
+        </div>
+        <div class="right-content" id="rightContent">dlaD;asdoasDOJP</div>
+        <div class="ingredients-content" id="ingredContent"></div>
+        <div class="recipes-content" id="recipesContent"></div>
+        <div class="loginForm" id="loginForm">
+          <form onsubmit="return handleSubmit(event)">
+           
+            <label for="loginName">Login: </label>
+            <input type="text" name="loginName" required>
+            <br><br>
+            <label for="password">Password: </label>
+            <input type="password" name="password" required>
+            <br><br>
+            <input type="submit" value="LogIn">
+            <br><br>
+            <p class="pLogin" id="pLogin"></p>
+            <span class="forgotPassword">Odzyskaj haslo</span>
+          </form>
+        </div>
+        <div class="productList" id="productList"> 
+        </div>
+        <!-- <div class="registerForm" id="registerForm">
+          <label for="loginName"> Login: </label>
+            <input type="text" name="loginName" required>
+            <br><br> -->
+            <!-- tutaj obsluzyc czy juz jest czy nie ma tego loginu -->
+            <!-- <label for="password">Password: </label>
+            <input type="password" name="password" required>
+            <br><br>
+            <label for="passwordConfirm">Password confirm: </label>
+            <input type="password" name="passwordConfirm" required>
+            <br><br>  -->
+            <!-- porownanie hasel -->
+            <!-- <input type="submit" value="LogIn">
+            <br><br>
+            <p class="pLogin" id="pLogin"></p> -->
 
-      <ul id="nav-bar">
-        <li class="li-nav"><a href="https://www.wikiart.org/">wikiArt</a></li>
-        <li class="li-nav" id="logowanie">logowanie</li>
-        <li class="li-nav"><a href="#footer">kontakt</a></li>
-      </ul>
-    </nav>
-    <section>
-      <div class="sec-main" id="sec1">
-        <div class="art" id="art1">
-          <img src="source/nr4.jpg" alt="nr4" class="img-art" />
-          <p class="p-art">Znamy sekret gładkiej skóry Narcyza!</p>
-        </div>
-        <div class="art" id="art2">
-          <img src="source/nr3.jpg" alt="nr3" class="img-art" />
-          <p class="p-art">Godzinowe stawki koni-modeli</p>
-        </div>
-        <div class="art" id="art3">
-          <img src="source/nr1.jpg" alt="nr1" class="img-art" />
-          <p class="p-art">Nie uwierzycie, co powiedział anioł</p>
-        </div>
+        <!-- </div> -->
       </div>
-      <div class="sec-art" id="sec2">
-        <div class="imag">
-          <img src="source/nr4.jpg" alt="Narcyz" />
-        </div>
-        <div class="text">
-          Tematem obrazu jest postać Narcyza, bohatera mitu opowiedzianego przez
-          Owidiusza w Metamorfozach. Artysta namalował młodego i pięknego
-          młodzieńca, który klęcząc pochyla się nad spokojnym lustrem wody.
-          Narcyz przedstawiony został w niewygodnej pozycji, wspiera się na
-          rękach, a jego ciało jest mocno pochylone do przodu. Strój i uczesanie
-          są typowe dla epoki, w której żył autor obrazu, nie zawierają żadnych
-          mitologicznych odniesień. Delikatna twarz, długie włosy i wykwintna
-          koszula mogą sugerować zniewieścienie modela, typowe dla wczesnych
-          obrazów Caravaggia. Narcyz zapatrzony jest we własne odbicie, nie może
-          oderwać wzroku i sprawia wrażenie zahipnotyzowanego. Jego zastygła
-          twarz jest smutna, wyraża niespełnioną tęsknotę do tego, co
-          niemożliwe. Odbicie w wodzie, chociaż wyraźne, jest nieco zamglone,
-          bardziej wyeksponowane są części ciała i ubioru, które mocniej
-          odbijają światło. Obraz ma ciemne tło i jest prawie monochromatyczny,
-          dominują odcienie brązu. Postać wyłania się z mroku, oświetlona ze
-          źródła ostrego światła umieszczonego z lewej strony. Ręce, twarz,
-          jedno kolano i koszula są silnie oświetlone i nadają całości głębi.
-          Kompozycja jest ciasna, sylwetka Narcyza i jej odbicie wypełniają
-          niemal całą przestrzeń płótna.
-        </div>
-      </div>
-      <div class="sec-art" id="sec3">
-        <div class="imag">
-          <img src="source/nr3.jpg" alt="Nawrocenie sw Pawła" />
-        </div>
-        <div class="text">
-          Tematem obrazu jest postać Narcyza, bohatera mitu opowiedzianego przez
-          Owidiusza w Metamorfozach. Artysta namalował młodego i pięknego
-          młodzieńca, który klęcząc pochyla się nad spokojnym lustrem wody.
-          Narcyz przedstawiony został w niewygodnej pozycji, wspiera się na
-          rękach, a jego ciało jest mocno pochylone do przodu. Strój i uczesanie
-          są typowe dla epoki, w której żył autor obrazu, nie zawierają żadnych
-          mitologicznych odniesień. Delikatna twarz, długie włosy i wykwintna
-          koszula mogą sugerować zniewieścienie modela, typowe dla wczesnych
-          obrazów Caravaggia. Narcyz zapatrzony jest we własne odbicie, nie może
-          oderwać wzroku i sprawia wrażenie zahipnotyzowanego. Jego zastygła
-          twarz jest smutna, wyraża niespełnioną tęsknotę do tego, co
-          niemożliwe. Odbicie w wodzie, chociaż wyraźne, jest nieco zamglone,
-          bardziej wyeksponowane są części ciała i ubioru, które mocniej
-          odbijają światło. Obraz ma ciemne tło i jest prawie monochromatyczny,
-          dominują odcienie brązu. Postać wyłania się z mroku, oświetlona ze
-          źródła ostrego światła umieszczonego z lewej strony. Ręce, twarz,
-          jedno kolano i koszula są silnie oświetlone i nadają całości głębi.
-          Kompozycja jest ciasna, sylwetka Narcyza i jej odbicie wypełniają
-          niemal całą przestrzeń płótna.
-        </div>
-      </div>
-      <div class="sec-art" id="sec4">
-        <div class="imag">
-          <img src="source/nr1.jpg" alt="Swiety Mateusz i anioł" />
-        </div>
-        <div class="text">
-          Tematem obrazu jest postać Narcyza, bohatera mitu opowiedzianego przez
-          Owidiusza w Metamorfozach. Artysta namalował młodego i pięknego
-          młodzieńca, który klęcząc pochyla się nad spokojnym lustrem wody.
-          Narcyz przedstawiony został w niewygodnej pozycji, wspiera się na
-          rękach, a jego ciało jest mocno pochylone do przodu. Strój i uczesanie
-          są typowe dla epoki, w której żył autor obrazu, nie zawierają żadnych
-          mitologicznych odniesień. Delikatna twarz, długie włosy i wykwintna
-          koszula mogą sugerować zniewieścienie modela, typowe dla wczesnych
-          obrazów Caravaggia. Narcyz zapatrzony jest we własne odbicie, nie może
-          oderwać wzroku i sprawia wrażenie zahipnotyzowanego. Jego zastygła
-          twarz jest smutna, wyraża niespełnioną tęsknotę do tego, co
-          niemożliwe. Odbicie w wodzie, chociaż wyraźne, jest nieco zamglone,
-          bardziej wyeksponowane są części ciała i ubioru, które mocniej
-          odbijają światło. Obraz ma ciemne tło i jest prawie monochromatyczny,
-          dominują odcienie brązu. Postać wyłania się z mroku, oświetlona ze
-          źródła ostrego światła umieszczonego z lewej strony. Ręce, twarz,
-          jedno kolano i koszula są silnie oświetlone i nadają całości głębi.
-          Kompozycja jest ciasna, sylwetka Narcyza i jej odbicie wypełniają
-          niemal całą przestrzeń płótna.
-        </div>
-      </div>
-      <div id="sec5">Logowanie</div>
-    </section>
-    <footer>
-      <a name="footer"
-        >Jeśli posiadasz ciekawe informacje z zycia malarzy napisz do nas:
-        artplotek@gmail.com</a
-      >
-    </footer>
+    </div>
+
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script src="views/ingredient_view.js"></script>
+    <script src="views/recipe_view.js"></script>
+    <script src="views/products_view.js"></script>
+    <script src="js_file/mockedLoginService.js"></script>
   </body>
 </html>

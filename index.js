@@ -1,54 +1,61 @@
-const myEle1 = document.getElementById("sec1");
-myEle1.style.display = "flex";
+//let userRole = null;
+//potrzebuje cos, zeby robic zasiegi a tego nie trzeba tu czyscic a jak dam local storage to trzeba czyscic
 
-//visibilty nie usuwa elementu ale go nie usuwa z Flow DOM
-//- czyli zajmuje miejsce nadal a jak uzyje displey:none to juz footer podejdzie na górę
+const loginFailedMsg = document.getElementById("pLogin");
 
-const myEle2 = document.getElementById("sec2");
-myEle2.style.display = "none";
+const ingredContent = document.getElementById("ingredContent");
+ingredContent.style.display = "none";
 
-const myEle3 = document.getElementById("sec3");
-myEle3.style.display = "none";
+const recipesContent = document.getElementById("recipesContent");
+recipesContent.style.display = "none";
 
-const myEle4 = document.getElementById("sec4");
-myEle4.style.display = "none";
+const loginForm = document.getElementById("loginForm");
+loginForm.style.display = "flex";
 
-const myLogowanie = document.getElementById("sec5");
-myLogowanie.style.display = "none";
+const rightContent = document.getElementById("rightContent");
+rightContent.style.display = "none";
 
-const myArt1 = document.getElementById("art1");
-myArt1.onclick = function () {
-  myEle1.style.display = "none";
-  myEle2.style.display = "flex";
+const leftMenu = document.getElementById("leftMenu");
+leftMenu.style.display = "none";
+
+const productListContent = document.getElementById("productList");
+productListContent.style.display = "none";
+
+const liIngred = document.getElementById("li-ingred");
+liIngred.onclick = function () {
+  ingredContent.style.display = "flex";
+  rightContent.style.display = "none";
+  recipesContent.style.display = "none";
+  leftMenu.style.display = "block";
+  loginForm.style.display = "none";
 };
 
-const myArt2 = document.getElementById("art2");
-myArt2.onclick = function () {
-  myEle1.style.display = "none";
-  myEle3.style.display = "flex";
+const liRecipes = document.getElementById("li-recipes");
+liRecipes.onclick = function () {
+  recipesContent.style.display = "flex";
+  rightContent.style.display = "none";
+  ingredContent.style.display = "none";
+  leftMenu.style.display = "block";
+  loginForm.style.display = "none";
 };
 
-const myArt3 = document.getElementById("art3");
-myArt3.onclick = function () {
-  myEle1.style.display = "none";
-  myEle4.style.display = "flex";
-};
+// const funckja_zewnentrzna = () => {
+//   const imie = "Aga";
+//   const funkcja_wewnetrzna = () => {
+//     return "Cześć " + imie;
+//   };
 
-const myLogowanieButton = document.getElementById("logowanie");
-myLogowanieButton.onclick = function () {
-  myEle1.style.display = "none";
-  myEle2.style.display = "none";
-  myEle3.style.display = "none";
-  myEle4.style.display = "none";
-  myLogowanie.style.display = "flex";
-};
+//   return funkcja_wewnetrzna;
+// };
 
-const myLogo = document.getElementById("logo");
-myLogo.onclick = function () {
-  myEle1.style.display = "flex";
-  myEle2.style.display = "none";
-  myEle3.style.display = "none";
-  myEle4.style.display = "none";
-  myLogowanie.style.display = "none";
-  console.log("dupa");
-};
+// const wywolanie_funkcji_zewnetrznej = funckja_zewnentrzna();
+
+// wywolanie_funkcji_zewnetrznej(); // 'Cześć Aga'
+//kiedy funckaj zosataje wywoalana to juz jej nie ma i dlatego ma mnie zdziwic ze skad on nie wie co podstawic pod stala IMIE skoro po wywolaniu funkcji ona znika
+//funckja moze zostac wywoalana poza swoim zakresem ale nadal miec do niego dostep - ta zewnatrzna domyka te wewnatrzna
+// w tej zoltej ksiazce to jest opisane ale kurde gdzie jest ta ksiazka
+
+// bandler zarzadza kodem zrodlowym - mam zaleznosci miedzy plikami, type script musi byc skompilowany do JS, s-cssy (preprocesory) tez - musi to byc w odpowiedniej kolejnosci zaciagnete (sparsowane czyli zmienic format),
+// pilkow mam wiele w projekcie - zeby te pliki zaciagnac we wlasciwej kolejnosci ( bandler maja tzw entry point dociagnie wszystkie zaleznosci)
+// bandler rozdzieli kody html od css od js na paczki ( zrobi takie wyspy),zminifiukuje kod
+// bundler  ma taka opcje HMR ktory pozwala nasluchiwac na zmiany w plikach i przebuduje wtedy projket
